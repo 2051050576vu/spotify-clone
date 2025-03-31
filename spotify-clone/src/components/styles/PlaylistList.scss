@@ -1,0 +1,47 @@
+.playlist-list {
+  margin-bottom: 20px;
+
+  h2 {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+
+  .playlists {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+
+    .playlist-item-link { /* Style cho thẻ Link */
+      text-decoration: none; /* Loại bỏ gạch chân mặc định */
+      color: inherit; /* Kế thừa màu từ parent */
+      display: block; /* Để chiếm toàn bộ không gian của item */
+    }
+
+    .playlist-item {
+      background-color: #181818;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      p {
+        color: #fff;
+        padding: 10px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &:hover {
+        background-color: #282828;
+      }
+    }
+  }
+}
